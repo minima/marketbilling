@@ -618,14 +618,7 @@ public class IabHelper {
                 IabResult result = new IabResult(BILLING_RESPONSE_RESULT_OK, "Inventory refresh successful.");
                 Inventory inv = null;
                 try {
-                    if( mContext != null )
-                    {
-                        inv = queryInventory(querySkuDetails, moreSkus);
-                    }
-                    else
-                    {
-                        result = new IabResult(IABHELPER_UNKNOWN_ERROR, "mContext was null.");
-                    }
+                    inv = queryInventory(querySkuDetails, moreSkus);
                 }
                 catch (IabException ex) {
                     result = ex.getResult();
