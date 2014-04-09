@@ -835,7 +835,7 @@ public class IabHelper {
 
 
     int queryPurchases(Inventory inv, String itemType) throws JSONException, RemoteException {
-        if( mContext != null )
+        if( mContext == null )
         {
             return IABHELPER_UNKNOWN_ERROR;
         }
